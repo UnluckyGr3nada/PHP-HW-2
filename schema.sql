@@ -1,20 +1,16 @@
-
-
-CREATE TABLE ecoles (
-  id INT  auto_increment,
+CREATE TABLE schools (
+  id INT auto_increment,
   name VARCHAR(255) not null,
   PRIMARY KEY (id)
-
 );  
 
-CREATE TABLE eleves (
+CREATE TABLE students (
   id INT auto_increment,
   name VARCHAR(255) not null,
   school_id INT not null,
   PRIMARY KEY (id),
-  FOREIGN KEY (school_id) REFERENCES ecoles(id)
+  FOREIGN KEY (school_id) REFERENCES schools(id)
 );
-
 
 CREATE TABLE sports (
   id INT auto_increment,
@@ -22,17 +18,14 @@ CREATE TABLE sports (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE eleves_sports (
-  eleves_id INT not null,
+CREATE TABLE student_sports (
+  student_id INT not null,
   sport_id INT not null,
-  PRIMARY KEY (eleves_id, sport_id),
-  FOREIGN KEY (eleves_id) REFERENCES eleves(id),
+  PRIMARY KEY (student_id, sport_id),
+  FOREIGN KEY (student_id) REFERENCES students(id),
   FOREIGN KEY (sport_id) REFERENCES sports(id)
 );
 
-
--- Insertion des données dans les tables
-
-INSERT INTO ecoles (name) VALUES ('ecoles A', 'ecoles B', 'ecoles C');
-
-INSERT INTO sports (name) VALUES ('boxe', 'judo', 'football','natation', 'cyclisme');
+-- Correct syntax for multi-row insertions
+INSERT INTO schools (name) VALUES ('École A'), ('École B'), ('École C');
+INSERT INTO sports (name) VALUES ('boxe'), ('judo'), ('football'), ('natation'), ('cyclisme');
