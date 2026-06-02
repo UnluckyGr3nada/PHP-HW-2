@@ -1,0 +1,17 @@
+Les développements qui peuvent être utiles sont :
+
+1. Mise en place d'une interface d'administration (CRUD): 
+
+Actuellement les données disponibles sont directement insérés de manière statique via le script de la base de données.
+Une espace administrative sécurisé serait utile . Cet outil va permettrait que les utilisateurs autoriser de ajouter, supprimier ou
+modifier des données du database .
+
+
+2. Modernisation de l'interface utilisateur avec des graphiques dynamiques : 
+
+L'affichage actuel restitue les données sous forme de listes textuelles, 
+Pour rendre ce tableau de bord plus facile a visualiser et intuitif.
+L'integration dune d'une bibliothèque JavaScript spécialisée (telle que Chart.js ou Google Charts)
+permettrait de convertir automatiquement ces statistiques en une forme visuel interatif.
+Cela facilite la compréhension des données .
+
